@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
+using std::cin;
 using std::cout;
 using std::endl;
 
@@ -66,6 +67,9 @@ public:
 
 	bool operator==(const Point& p);
 
+	operator bool() const {
+		return (x || y || z);
+	}
 	
 		
 
@@ -93,7 +97,7 @@ public:
 	}
 };
 
-int Point::pointsCounter = 0;
+
 
 
 

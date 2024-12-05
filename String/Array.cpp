@@ -15,6 +15,35 @@ Array::Array(const Array& obj):Array(obj.size) {
 		arr[i] = obj.arr[i];
 }
 
+
+void Array::operator()(int n) {
+	for (int i = 0; i < size; i++)
+		arr[i] += n;
+}
+
+Array::Array(Array&& obj) {
+	cout << "Move constructor called" << endl;
+	size = obj.size;
+	arr = obj.arr;
+	obj.arr = nullptr;
+	obj.size = 0;
+}
+
+Array& Array::operator=(Array&& obj) {
+	cout << "Operator=(Array&& obj) CALLED" << endl;
+	delete[]arr;
+	size = obj.size;
+	arr = obj.arr;
+	obj.arr = nullptr;
+	obj.size = 0;
+	return *this;
+}
+
+int& Array::operator[](int i) {
+	return arr[i];
+}
+
+
 void Array::init() {
 	for (int i = 0; i < size; i++)
 		arr[i] = rand() % size;

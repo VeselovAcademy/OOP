@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
+#include "Point.h"
 using namespace std;
+
+int Point::pointsCounter = 0;
+
 
 void func(Point p) {
 	p.print();
@@ -25,7 +29,13 @@ Point addPoints(const Point& p1, const Point& p2) {
 int main() {
 	
 	Point point1{10,11,12};//значения по умолчанию 0 0 0 
-	Point point2{10,15,12};
+	Point point2{0,0,0};
+
+	cout << "CASTING" << endl;
+	cout << (bool)point2 << endl;
+
+
+
 
 	if (point1 == point2)
 		cout << "Points are equal" << endl;

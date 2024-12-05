@@ -28,6 +28,14 @@ public:
 	Array();
 	Array(int n);
 	Array(const Array& obj);
+	Array(Array&& obj);
+	//Array& operator=(const Array& obj) = default;
+	Array& operator=(Array&& obj);
+	int& operator[](int i);
+
+	void operator()(int n);
+
+
 	void init();
 	void print();
 	void resize(int n);
