@@ -10,7 +10,7 @@ public:
 	//Empty string
 	String();
 	String(const char* s);
-
+	int length();
 	//copy constructor
 	String(const String& obj);
 	bool mystrcmp(const String& s2);

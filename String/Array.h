@@ -19,6 +19,11 @@ using std::endl;
 */
 
 
+/*
+Преобразование к int возвращает сумму элементов массива
+Преобразование к char* возвращает значения элементов массива в виде строки
+*/
+
 
 class Array
 {
@@ -30,6 +35,24 @@ public:
 	Array(const Array& obj);
 	Array(Array&& obj);
 	//Array& operator=(const Array& obj) = default;
+
+	//Преобразование к int возвращает сумму элементов массива
+	operator int() const {
+		int sum{};
+		for (int i = 0; i < size; i++)
+			sum += arr[i];
+		return sum;
+	}
+
+
+	operator char* () const {
+		char* ptr = new char[size + 1] {};
+		for (int i = 0; i < size; i++)
+			ptr[i] = arr[i]+48;
+		return ptr;
+	}
+
+
 	Array& operator=(Array&& obj);
 	int& operator[](int i);
 

@@ -18,6 +18,9 @@ String::String(const char* s) {
 	//std::cout << "Overloaded constructor called" << std::endl;
 }
 
+int String::length() {
+	return strlen(str);
+}
 
 
 String::String(const String& obj) {
@@ -38,6 +41,11 @@ void String::setstr(const char* s) {
 void String::print() {
 	std::cout << str << std::endl;
 }
+
+//String String::operator+(String str, int n) {
+//
+//}
+
 
 int String::getCount() {
 	return count;

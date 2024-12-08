@@ -127,11 +127,13 @@
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="String.cpp" />
+    <ClCompile Include="Var.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="Book.h" />
     <ClInclude Include="String.h" />
+    <ClInclude Include="Var.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
